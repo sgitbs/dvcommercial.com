@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Reviews | Daniel Valenzuela — Commercial Real Estate</title>
+<meta name="description" content="Client reviews and testimonials for Daniel Valenzuela, Sr. Commercial Associate at MGR Real Estate, serving investors, property owners and business operators across Southern California.">
+<meta name="keywords" content="Daniel Valenzuela Reviews, Daniel Valenzuela Testimonials, Commercial Real Estate Broker Reviews Southern California">
+<link rel="icon" href="DV_Logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0a09;
+  --charcoal:#141311;
+  --graphite:#1f1d19;
+  --graphite-lt:#2b2823;
+  --line:rgba(201,162,39,0.18);
+  --gold:#c9a227;
+  --gold-bright:#e3bd4d;
+  --champagne:#e9d9ae;
+  --white:#f4f1e9;
+  --white-dim:rgba(244,241,233,0.62);
+  --white-faint:rgba(244,241,233,0.34);
+  --serif:'Fraunces',serif;
+  --sans:'Manrope',sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+}
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:var(--sans);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;}
+
+.wrap{max-width:1280px;margin:0 auto;padding:0 40px;}
+@media (max-width:768px){.wrap{padding:0 24px;}}
+
+.eyebrow{
+  font-family:var(--sans);
+  font-size:12px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);display:inline-block;}
+
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-0.01em;}
+
+/* ============ background texture ============ */
+.grain{
+  position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.045;mix-blend-mode:overlay;
+}
+
+/* ============ NAV ============ */
+header.site-nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:22px 40px;
+  transition:padding .4s var(--ease), background .4s var(--ease), border-color .4s var(--ease);
+  border-bottom:1px solid transparent;
+}
+header.site-nav.scrolled{
+  padding:14px 40px;
+  background:rgba(10,10,9,0.86);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-brand{display:flex;align-items:center;gap:12px;}
+.nav-brand img{height:38px;width:auto;transition:height .4s var(--ease);}
+header.site-nav.scrolled .nav-brand img{height:30px;}
+.logo-loop{position:relative;overflow:hidden;flex:none;background:var(--black);border:1px solid var(--gold);}
+.logo-loop img{position:absolute;top:50%;left:50%;width:100%;height:100%;transform:translate(-50%,-50%);object-fit:cover;pointer-events:none;}
+.nav-brand .logo-loop{width:38px;height:38px;border-radius:0;transition:width .4s var(--ease),height .4s var(--ease);}
+header.site-nav.scrolled .nav-brand .logo-loop{width:30px;height:30px;}
+.nav-brand .brand-text{font-family:var(--serif);font-size:16px;letter-spacing:.08em;line-height:1.2;}
+.nav-brand .brand-text span{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-top:2px;}
+nav.nav-links{display:flex;gap:36px;align-items:center;}
+nav.nav-links a{
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--white-dim);
+  position:relative;padding:4px 0;transition:color .3s;
+}
+nav.nav-links a::after{
+  content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width .35s var(--ease);
+}
+nav.nav-links a:hover{color:var(--white);}
+nav.nav-links a:hover::after{width:100%;}
+.nav-cta{
+  border:1px solid var(--gold);color:var(--champagne);
+  padding:10px 22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  transition:all .35s var(--ease);white-space:nowrap;
+}
+.nav-cta:hover{background:var(--gold);color:var(--black);}
+.nav-toggle{display:none;flex-direction:column;gap:5px;padding:8px;z-index:110;}
+.nav-toggle span{width:24px;height:1px;background:var(--white);transition:all .3s;}
+
+@media (max-width:980px){
+  nav.nav-links{
+    position:fixed;inset:0;background:var(--black);
+    flex-direction:column;justify-content:center;gap:32px;
+    transform:translateX(100%);transition:transform .5s var(--ease);
+  }
+  nav.nav-links.open{transform:translateX(0);}
+  nav.nav-links a{font-size:15px;}
+  .nav-toggle{display:flex;}
+  header.site-nav{padding:18px 24px;}
+}
+
+/* sticky mobile contact bar */
+.mobile-cta-bar{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;
+  background:rgba(10,10,9,.95);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);
+  padding:12px 16px;gap:10px;
+}
+@media (max-width:768px){.mobile-cta-bar{display:flex;}}
+.mobile-cta-bar a{
+  flex:1;text-align:center;padding:13px 8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+}
+.mobile-cta-bar a.call{background:var(--gold);color:var(--black);font-weight:700;}
+.mobile-cta-bar a.email{border:1px solid var(--line);color:var(--white-dim);}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  padding:120px 40px 80px;overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg svg{position:absolute;bottom:0;left:0;width:100%;height:auto;opacity:.5;}
+.hero-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%, rgba(201,162,39,0.06), transparent 60%),linear-gradient(180deg, rgba(10,10,9,0.2) 0%, rgba(10,10,9,0.55) 70%, var(--black) 100%);}
+.hero-ring{
+  position:absolute;top:50%;left:50%;width:840px;height:840px;
+  border:1px solid var(--line);border-radius:50%;
+  transform:translate(-50%,-50%);
+}
+.hero-ring.r2{width:1040px;height:1040px;border-color:rgba(201,162,39,0.08);}
+@media (max-width:768px){.hero-ring{width:520px;height:520px;} .hero-ring.r2{width:640px;height:640px;}}
+
+.hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;text-align:center;}
+.hero-logo-wrap{width:min(56vw,58vh,560px);height:min(56vw,58vh,560px);margin:0 auto 24px;opacity:0;animation:fadeUp 1s var(--ease) .1s forwards;position:relative;}
+.hero-logo-wrap::before{content:'';position:absolute;inset:-16px;border:1px solid var(--line);}
+.hero-logo-wrap .logo-loop{width:100%;height:100%;border-radius:0;box-shadow:0 0 120px -10px rgba(201,162,39,0.4);}
+@media (max-width:768px){.hero-logo-wrap{width:min(72vw,48vh,340px);height:min(72vw,48vh,340px);}}
+@keyframes spinSlow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.hero h1{
+  font-size:clamp(26px,4.4vw,58px);line-height:1.05;letter-spacing:-0.01em;
+  text-transform:uppercase;color:var(--white);
+  opacity:0;animation:fadeUp 1s var(--ease) .25s forwards;
+}
+.hero h1 em{font-style:italic;color:var(--gold-bright);}
+.hero .sub{
+  max-width:600px;margin:26px auto 0;font-size:16px;color:var(--white-dim);font-weight:300;
+  opacity:0;animation:fadeUp 1s var(--ease) .4s forwards;
+}
+.hero-stat{
+  margin:56px auto 0;max-width:640px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:28px 0;opacity:0;animation:fadeUp 1s var(--ease) .55s forwards;
+}
+.hero-stat .num{font-family:var(--serif);font-size:clamp(30px,4vw,44px);color:var(--gold-bright);letter-spacing:.02em;}
+.hero-stat .label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--white-dim);margin-top:8px;}
+.hero-stat .fine{font-size:12px;color:var(--white-faint);margin-top:10px;font-style:italic;}
+.hero-actions{
+  display:flex;gap:18px;justify-content:center;margin:44px auto 0;flex-wrap:wrap;
+  opacity:0;animation:fadeUp 1s var(--ease) .7s forwards;
+}
+.btn{
+  padding:16px 34px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  transition:all .4s var(--ease);white-space:nowrap;
+}
+.btn-primary{background:var(--gold);color:var(--black);font-weight:700;}
+.btn-primary:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 12px 30px -8px rgba(201,162,39,.5);}
+.btn-outline{border:1px solid var(--white-faint);color:var(--white);}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold-bright);}
+.hero-contact{
+  margin-top:30px;font-size:13px;letter-spacing:.06em;color:var(--white-dim);
+  display:flex;gap:24px;justify-content:center;flex-wrap:wrap;
+  opacity:0;animation:fadeUp 1s var(--ease) .85s forwards;
+}
+.hero-contact a:hover{color:var(--gold-bright);}
+.scroll-ind{
+  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  opacity:0;animation:fadeUp 1s var(--ease) 1.1s forwards;
+}
+.scroll-ind .line{width:1px;height:44px;background:linear-gradient(var(--gold),transparent);animation:scrollLine 2.4s ease-in-out infinite;}
+.scroll-ind span{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--white-faint);}
+@keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}50.1%{transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+
+/* ============ generic section scaffolding ============ */
+section{position:relative;padding:150px 0;}
+@media (max-width:768px){section{padding:96px 0;}}
+.section-alt{background:var(--charcoal);}
+.section-head{max-width:760px;margin-bottom:70px;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-head h2{font-size:clamp(28px,4vw,50px);line-height:1.12;margin-top:20px;text-transform:uppercase;}
+.section-head h2 em{font-style:italic;color:var(--gold-bright);}
+.section-head p{margin-top:22px;color:var(--white-dim);font-size:16px;font-weight:300;max-width:600px;}
+.section-head.center p{margin-left:auto;margin-right:auto;}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease), transform .9s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+.reveal-stagger > *{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.reveal-stagger.in > *{opacity:1;transform:translateY(0);}
+.reveal-stagger.in > *:nth-child(1){transition-delay:.05s;}
+.reveal-stagger.in > *:nth-child(2){transition-delay:.15s;}
+.reveal-stagger.in > *:nth-child(3){transition-delay:.25s;}
+.reveal-stagger.in > *:nth-child(4){transition-delay:.35s;}
+.reveal-stagger.in > *:nth-child(5){transition-delay:.45s;}
+.reveal-stagger.in > *:nth-child(6){transition-delay:.55s;}
+.reveal-stagger.in > *:nth-child(7){transition-delay:.65s;}
+
+.gold-rule{
+  width:64px;height:1px;background:var(--gold);position:relative;overflow:hidden;
+}
+.gold-rule.animated::after{
+  content:'';position:absolute;inset:0;background:var(--gold-bright);
+  transform:scaleX(0);transform-origin:left;transition:transform 1.1s var(--ease);
+}
+.reveal.in .gold-rule.animated::after{transform:scaleX(1);}
+
+/* ============ SECTION 2 — pillars ============ */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+@media (max-width:980px){.pillars{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.pillars{grid-template-columns:1fr;}}
+.pillar{background:var(--black);padding:44px 32px;transition:background .4s;}
+.pillar:hover{background:var(--graphite);}
+.pillar .icon{width:38px;height:38px;margin-bottom:26px;color:var(--gold);}
+.pillar h3{font-size:18px;letter-spacing:.06em;text-transform:uppercase;font-family:var(--sans);font-weight:700;color:var(--champagne);}
+.pillar p{margin-top:14px;font-size:14px;color:var(--white-dim);font-weight:300;}
+
+/* ============ SECTION 3 — big number ============ */
+.big-number-section{text-align:center;padding:170px 0;position:relative;}
+.big-number-section .ring-deco{position:absolute;top:50%;left:50%;width:920px;height:920px;transform:translate(-50%,-50%);border:1px solid var(--line);border-radius:50%;}
+.big-number{font-family:var(--serif);font-weight:300;font-size:clamp(64px,14vw,220px);line-height:.92;letter-spacing:-.02em;color:var(--white);position:relative;z-index:1;}
+.big-number .cur{font-size:.42em;vertical-align:12%;color:var(--gold-bright);}
+.big-number-label{margin-top:18px;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);position:relative;z-index:1;}
+.big-number-sub{max-width:560px;margin:34px auto 0;color:var(--white-dim);font-size:15px;font-weight:300;position:relative;z-index:1;}
+.metric-row{
+  display:flex;justify-content:center;gap:0;flex-wrap:wrap;margin-top:80px;position:relative;z-index:1;
+  border-top:1px solid var(--line);padding-top:44px;
+}
+.metric-row .metric{padding:0 34px;border-right:1px solid var(--line);}
+.metric-row .metric:last-child{border-right:none;}
+.metric-row .metric span{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--white-faint);}
+@media (max-width:768px){.metric-row .metric{padding:12px 20px;border-right:none;border-bottom:1px solid var(--line);flex:1 1 40%;}}
+
+/* ============ SECTION 4 — services grid ============ */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);}
+@media (max-width:980px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.services-grid{grid-template-columns:1fr;}}
+.service-card{
+  background:var(--charcoal);padding:46px 36px;min-height:230px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  transition:background .4s;position:relative;
+}
+.service-card:hover{background:var(--graphite-lt);}
+.service-card .num{font-size:11px;color:var(--gold);letter-spacing:.14em;}
+.service-card h3{margin-top:70px;font-size:19px;text-transform:uppercase;letter-spacing:.03em;font-family:var(--sans);font-weight:700;color:var(--white);}
+.service-card p{margin-top:12px;font-size:13.5px;color:var(--white-dim);font-weight:300;}
+
+/* ============ SECTION 5 — property types ============ */
+.ptype-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+@media (max-width:980px){.ptype-grid{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:620px){.ptype-grid{grid-template-columns:repeat(2,1fr);}}
+.ptype{
+  position:relative;aspect-ratio:3/4;overflow:hidden;
+  background:linear-gradient(155deg,var(--graphite) 0%, var(--black) 60%, var(--graphite-lt) 100%);
+  display:flex;align-items:flex-end;padding:18px;
+  border:1px solid var(--line);
+}
+.ptype::before{
+  content:'';position:absolute;inset:0;opacity:.5;
+  background-image:repeating-linear-gradient(100deg, rgba(201,162,39,0.05) 0 2px, transparent 2px 26px);
+}
+.ptype::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:60%;
+  background:linear-gradient(0deg, rgba(0,0,0,.75), transparent);
+}
+.ptype span{position:relative;z-index:1;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--champagne);font-weight:600;}
+.ptype:hover{border-color:var(--gold);}
+
+/* ============ SECTION 6 — featured opportunity ============ */
+.featured{
+  border:1px solid var(--line);position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1.1fr 1fr;
+}
+@media (max-width:900px){.featured{grid-template-columns:1fr;}}
+.featured-visual{
+  min-height:420px;position:relative;
+  background:linear-gradient(160deg,#211f1c 0%, #0a0a09 55%, #262119 100%);
+  display:flex;align-items:center;justify-content:center;
+}
+.featured-visual svg{width:70%;opacity:.85;}
+.featured-badge{
+  position:absolute;top:24px;left:24px;border:1px solid var(--gold);
+  padding:6px 14px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--champagne);
+  background:rgba(10,10,9,.6);backdrop-filter:blur(6px);
+}
+.featured-body{padding:56px 50px;display:flex;flex-direction:column;justify-content:center;}
+@media (max-width:600px){.featured-body{padding:40px 26px;}}
+.featured-body .tag{font-size:11px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;}
+.featured-body h3{font-size:clamp(24px,3vw,34px);margin-top:14px;text-transform:uppercase;line-height:1.15;}
+.featured-body .loc{color:var(--white-dim);font-size:14px;margin-top:10px;}
+.featured-list{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;}
+.featured-list div{font-size:13px;color:var(--white-dim);padding-left:16px;position:relative;}
+.featured-list div::before{content:'';position:absolute;left:0;top:8px;width:6px;height:1px;background:var(--gold);}
+.featured-actions{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
+
+/* ============ SECTION 7 & 8 — forms ============ */
+.form-section-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start;}
+@media (max-width:900px){.form-section-grid{grid-template-columns:1fr;gap:40px;}}
+.form-card{border:1px solid var(--line);padding:44px;background:var(--charcoal);}
+@media (max-width:600px){.form-card{padding:28px;}}
+.field{margin-bottom:22px;}
+.field label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--white-faint);margin-bottom:9px;}
+.field input, .field select, .field textarea{
+  width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);
+  color:var(--white);font-family:var(--sans);font-size:15px;padding:10px 2px;transition:border-color .3s;
+}
+.field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23c9a227'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;}
+.field select option{background:var(--charcoal);color:var(--white);}
+.field input:focus, .field select:focus, .field textarea:focus{border-color:var(--gold);outline:none;}
+.field textarea{resize:vertical;min-height:80px;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+@media (max-width:520px){.field-row{grid-template-columns:1fr;}}
+.checkbox-tags{display:flex;flex-wrap:wrap;gap:9px;}
+.checkbox-tags label{
+  border:1px solid var(--line);padding:9px 15px;font-size:12px;letter-spacing:.04em;
+  color:var(--white-dim);cursor:pointer;transition:all .3s;text-transform:none;margin:0;
+}
+.checkbox-tags input{display:none;}
+.checkbox-tags input:checked + span{color:var(--black);}
+.checkbox-tags label:has(input:checked){background:var(--gold);border-color:var(--gold);color:var(--black);}
+.form-note{font-size:12px;color:var(--white-faint);margin-top:18px;}
+.form-status{margin-top:16px;font-size:13px;color:var(--gold-bright);display:none;}
+.form-status.show{display:block;}
+
+/* ============ SECTION 9 — leasing split ============ */
+.split{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);}
+@media (max-width:820px){.split{grid-template-columns:1fr;}}
+.split-half{padding:56px;position:relative;}
+@media (max-width:600px){.split-half{padding:36px 28px;}}
+.split-half:first-child{border-right:1px solid var(--line);}
+@media (max-width:820px){.split-half:first-child{border-right:none;border-bottom:1px solid var(--line);}}
+.split-half .tag{font-size:11px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;}
+.split-half h3{margin-top:16px;font-size:26px;text-transform:uppercase;}
+.split-half ul{margin-top:26px;list-style:none;}
+.split-half li{padding:12px 0;border-top:1px solid var(--line);font-size:14px;color:var(--white-dim);font-weight:300;}
+.split-half li:first-child{border-top:none;}
+
+/* ============ SECTION 10 — about ============ */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center;}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:44px;}}
+.about-portrait{
+  aspect-ratio:4/5;border:1px solid var(--line);position:relative;overflow:hidden;
+  background:radial-gradient(circle at 50% 35%, rgba(201,162,39,0.09), transparent 60%), linear-gradient(165deg,#1b1a17,#0a0a09 70%);
+  display:flex;align-items:center;justify-content:center;
+}
+.about-portrait .ring{position:absolute;width:78%;aspect-ratio:1;border:1px solid var(--line);border-radius:50%;pointer-events:none;}
+.about-portrait .logo-loop{width:66%;aspect-ratio:1;border-radius:0;position:relative;z-index:1;}
+.about-body .eyebrow{margin-bottom:20px;}
+.about-body h2{font-size:clamp(28px,4vw,44px);text-transform:uppercase;line-height:1.15;}
+.about-body .role{margin-top:10px;font-size:13px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;}
+.about-body p{margin-top:22px;color:var(--white-dim);font-size:15.5px;font-weight:300;max-width:560px;}
+.about-signoff{margin-top:34px;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--champagne);}
+
+/* ============ SECTION 11 — why work with ============ */
+.why-list{display:flex;flex-direction:column;border-top:1px solid var(--line);}
+.why-item{
+  display:grid;grid-template-columns:80px 1fr;gap:24px;padding:30px 0;border-bottom:1px solid var(--line);
+  align-items:baseline;transition:padding-left .4s var(--ease);
+}
+.why-item:hover{padding-left:14px;}
+.why-item .idx{font-family:var(--serif);font-size:15px;color:var(--gold);}
+.why-item h3{font-size:18px;text-transform:uppercase;letter-spacing:.04em;font-family:var(--sans);font-weight:700;}
+
+/* ============ SECTION 12 — socal map ============ */
+.map-wrap{position:relative;display:flex;justify-content:center;}
+.map-wrap svg{width:100%;max-width:640px;height:auto;}
+
+/* ============ SECTION 13 — insights ============ */
+.insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);}
+@media (max-width:900px){.insights-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:600px){.insights-grid{grid-template-columns:1fr;}}
+.insight-card{background:var(--black);padding:38px 32px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;transition:background .4s;}
+.insight-card:hover{background:var(--charcoal);}
+.insight-card .cat{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);}
+.insight-card h3{margin-top:60px;font-size:16px;text-transform:uppercase;font-family:var(--sans);font-weight:700;letter-spacing:.02em;}
+.insight-card .arrow{margin-top:16px;font-size:18px;color:var(--gold);transition:transform .3s;}
+.insight-card:hover .arrow{transform:translateX(6px);}
+
+/* ============ SECTION 14 — final cta ============ */
+.final-cta{text-align:center;padding:180px 0;position:relative;overflow:hidden;}
+.final-cta .skyline{position:absolute;bottom:0;left:0;width:100%;opacity:.35;}
+.final-cta h2{font-size:clamp(34px,6vw,72px);text-transform:uppercase;line-height:1.06;position:relative;z-index:1;}
+.final-cta .stack{margin:30px auto 0;color:var(--white-dim);font-size:15px;font-weight:300;position:relative;z-index:1;}
+.final-cta .contact-block{margin-top:44px;position:relative;z-index:1;}
+.final-cta .contact-block .name{font-family:var(--serif);font-size:20px;color:var(--champagne);}
+.final-cta .contact-block .role{font-size:12px;letter-spacing:.1em;color:var(--white-faint);margin-top:4px;}
+.final-cta .contact-block .digits{margin-top:18px;font-size:15px;}
+.final-cta .digits a{margin:0 10px;}
+.final-cta .digits a:hover{color:var(--gold-bright);}
+.final-cta .final-actions{margin-top:40px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+
+/* ============ footer ============ */
+footer{border-top:1px solid var(--line);padding:60px 0 120px;}
+@media (max-width:768px){footer{padding:50px 0 140px;}}
+.footer-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:36px;}
+.footer-brand{display:flex;align-items:center;gap:14px;}
+.footer-brand img{height:34px;}
+.footer-brand .logo-loop{width:34px;height:34px;border-radius:0;}
+.footer-brand .t{font-family:var(--serif);font-size:15px;}
+.footer-brand .t span{display:block;font-family:var(--sans);font-size:10px;color:var(--white-faint);letter-spacing:.12em;margin-top:3px;}
+.footer-contact{font-size:13px;color:var(--white-dim);text-align:right;}
+.footer-contact a:hover{color:var(--gold-bright);}
+.footer-legal{margin-top:44px;padding-top:26px;border-top:1px solid var(--line);font-size:11.5px;color:var(--white-faint);line-height:1.8;}
+
+/* utility */
+.center-text{text-align:center;}
+
+
+/* ============ SUBPAGE — page hero ============ */
+.page-hero{
+  position:relative;padding:170px 0 90px;overflow:hidden;text-align:center;
+}
+.page-hero .hero-ring{position:absolute;top:0;left:50%;width:640px;height:640px;border:1px solid var(--line);border-radius:50%;transform:translate(-50%,-38%);}
+.page-hero-logo{width:min(28vw,220px);height:min(28vw,220px);margin:0 auto 30px;position:relative;}
+.page-hero-logo .logo-loop{width:100%;height:100%;box-shadow:0 0 80px -14px rgba(201,162,39,0.35);}
+@media (max-width:768px){.page-hero-logo{width:min(40vw,160px);height:min(40vw,160px);}}
+.page-hero h1{font-size:clamp(30px,5vw,58px);text-transform:uppercase;line-height:1.1;position:relative;z-index:1;}
+.page-hero h1 em{font-style:italic;color:var(--gold-bright);}
+.page-hero p{max-width:600px;margin:22px auto 0;color:var(--white-dim);font-size:16px;font-weight:300;position:relative;z-index:1;}
+.breadcrumb{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--white-faint);position:relative;z-index:1;}
+.breadcrumb a{color:var(--white-dim);}
+.breadcrumb a:hover{color:var(--gold-bright);}
+
+/* ============ ABOUT PAGE — extended body ============ */
+.about-copy{max-width:760px;}
+.about-copy p{margin-top:22px;color:var(--white-dim);font-size:16px;font-weight:300;line-height:1.8;}
+.about-copy p:first-child{margin-top:0;}
+.pullquote{
+  margin:56px 0;padding:36px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,30px);color:var(--champagne);line-height:1.4;
+}
+.credential-strip{
+  display:flex;gap:0;flex-wrap:wrap;margin-top:60px;border-top:1px solid var(--line);
+}
+.credential-strip div{flex:1 1 200px;padding:26px 28px 26px 0;border-right:1px solid var(--line);}
+.credential-strip div:last-child{border-right:none;}
+.credential-strip .n{font-family:var(--serif);font-size:26px;color:var(--gold-bright);}
+.credential-strip .l{margin-top:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--white-faint);}
+@media (max-width:768px){.credential-strip div{flex:1 1 45%;border-right:none;border-bottom:1px solid var(--line);padding:20px 0;}}
+
+/* ============ REVIEWS PAGE ============ */
+.reviews-empty{
+  border:1px solid var(--line);padding:70px 50px;text-align:center;max-width:760px;margin:0 auto;
+}
+@media (max-width:600px){.reviews-empty{padding:44px 26px;}}
+.reviews-empty .mark{font-family:var(--serif);font-size:44px;color:var(--gold);opacity:.7;line-height:1;}
+.reviews-empty h3{margin-top:22px;font-size:24px;text-transform:uppercase;}
+.reviews-empty p{margin-top:18px;color:var(--white-dim);font-size:15px;font-weight:300;max-width:520px;margin-left:auto;margin-right:auto;}
+.reviews-empty .btn{margin-top:32px;}
+.review-placeholder-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:60px;}
+@media (max-width:900px){.review-placeholder-grid{grid-template-columns:1fr;}}
+.review-placeholder{background:var(--charcoal);padding:38px 32px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;}
+.review-placeholder .quote-mark{font-family:var(--serif);font-size:34px;color:var(--gold);opacity:.5;}
+.review-placeholder p{margin-top:16px;color:var(--white-faint);font-size:13.5px;font-style:italic;font-weight:300;}
+.review-placeholder .who{margin-top:20px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--white-faint);}
+</style>
+</head>
+<body>
+
+<svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+<!-- ================= NAV ================= -->
+<header class="site-nav" id="siteNav">
+  <a href="index.html" class="nav-brand">
+    <span class="logo-loop"><img src="DV_Logo.webp" alt="Daniel Valenzuela animated logo"></span>
+    <span class="brand-text">DANIEL VALENZUELA<span>Sr. Commercial Associate</span></span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html#opportunities" data-nav>Opportunities</a>
+    <a href="index.html#services" data-nav>Services</a>
+    <a href="index.html#property-types" data-nav>Property Types</a>
+    <a href="index.html#featured" data-nav>Featured</a>
+    <a href="about.html" data-nav>About</a>
+    <a href="reviews.html" data-nav>Reviews</a>
+    <a href="index.html#insights" data-nav>Insights</a>
+    <a href="index.html#contact" class="nav-cta" data-nav>Contact Daniel</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-cta-bar">
+  <a href="tel:9095816603" class="call">Call Daniel</a>
+  <a href="mailto:DVcommercial@gmail.com" class="email">Email</a>
+</div>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="page-hero" id="top">
+  <div class="hero-ring"></div>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Reviews</div>
+    <div class="page-hero-logo">
+      <span class="logo-loop"><img src="DV_Logo.webp" alt="Daniel Valenzuela animated logo"></span>
+    </div>
+    <span class="eyebrow" style="justify-content:center;">Client Experience</span>
+    <h1 style="margin-top:18px;">Results built on<br><em>relationships.</em></h1>
+    <p>Commercial real estate is a relationship business. This page is where clients' own words about working with Daniel will live, as they come in.</p>
+  </div>
+</section>
+
+<!-- ================= EMPTY STATE ================= -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="reviews-empty reveal">
+      <div class="mark">"</div>
+      <h3>Client testimonials coming soon</h3>
+      <p>This page is reserved for direct feedback from Daniel's clients — investors, property owners and business operators he's represented on acquisitions, dispositions and leasing transactions. Reviews will be added here as they're received, in clients' own words.</p>
+      <a href="mailto:DVcommercial@gmail.com?subject=Client%20Testimonial%20for%20Daniel%20Valenzuela&body=Hi%20Daniel%2C%0A%0AHere%27s%20a%20bit%20about%20my%20experience%20working%20with%20you%3A%0A%0A" class="btn btn-primary">Share Your Experience</a>
+    </div>
+
+    <div class="review-placeholder-grid reveal-stagger reveal">
+      <div class="review-placeholder">
+        <div class="quote-mark">"</div>
+        <p>A client testimonial will appear here once received.</p>
+        <div class="who">— Acquisition Client</div>
+      </div>
+      <div class="review-placeholder">
+        <div class="quote-mark">"</div>
+        <p>A client testimonial will appear here once received.</p>
+        <div class="who">— Property Owner</div>
+      </div>
+      <div class="review-placeholder">
+        <div class="quote-mark">"</div>
+        <p>A client testimonial will appear here once received.</p>
+        <div class="who">— Tenant / Landlord</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="final-cta">
+  <div class="wrap reveal">
+    <span class="eyebrow" style="justify-content:center;">Worked With Daniel?</span>
+    <h2 style="margin-top:22px;font-size:clamp(28px,4.5vw,52px);">Tell us how<br>it went.</h2>
+    <div class="stack">Your experience helps other investors, owners and business operators make an informed decision.</div>
+    <div class="final-actions">
+      <a href="mailto:DVcommercial@gmail.com?subject=Client%20Testimonial%20for%20Daniel%20Valenzuela" class="btn btn-primary">Email Your Testimonial</a>
+      <a href="index.html#contact" class="btn btn-outline">Contact Daniel</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-loop"><img src="DV_Logo.webp" alt="Daniel Valenzuela animated logo"></span>
+        <div class="t">Daniel Valenzuela<span>Sr. Commercial Associate · MGR Real Estate</span></div>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:9095816603">909.581.6603</a><br>
+        <a href="mailto:DVcommercial@gmail.com">DVcommercial@gmail.com</a><br>
+        Commercial Real Estate · Southern California
+      </div>
+    </div>
+    <div class="footer-legal">
+      © <span id="year"></span> Daniel Valenzuela, MGR Real Estate. All rights reserved.<br>
+      DRE license number and required brokerage, fair housing and MGR Real Estate disclosures to be added upon confirmation.
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll state
+const nav = document.getElementById('siteNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('[data-nav]').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}));
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold:0.16});
+revealEls.forEach(el => io.observe(el));
+
+// Count-up for big number
+const countEl = document.querySelector('[data-count]');
+if (countEl) {
+  const target = parseInt(countEl.getAttribute('data-count'), 10);
+  let started = false;
+  const countIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !started) {
+        started = true;
+        const dur = 1800;
+        const start = performance.now();
+        function tick(now){
+          const p = Math.min((now-start)/dur, 1);
+          const eased = 1 - Math.pow(1-p, 3);
+          countEl.textContent = Math.round(eased * target);
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        countIo.disconnect();
+      }
+    });
+  }, {threshold:0.5});
+  countIo.observe(countEl);
+}
+
+// Form handling — routes both forms to dvcommercial@gmail.com via Web3Forms
+document.querySelectorAll('form[data-form]').forEach(form => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const status = form.querySelector('.form-status');
+    const btn = form.querySelector('button[type=submit]');
+    const originalLabel = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+    if (status) { status.classList.remove('show'); status.style.color = ''; }
+
+    // Build a plain object from the form, combining repeated fields (checkboxes) into one string
+    const fd = new FormData(form);
+    const payload = {};
+    for (const key of new Set(fd.keys())) {
+      const values = fd.getAll(key);
+      payload[key] = values.length > 1 ? values.join(', ') : values[0];
+    }
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const result = await res.json().catch(() => ({}));
+      if (!res.ok || result.success === false) throw new Error(result.message || 'Request failed');
+      if (status) {
+        status.textContent = status.dataset.defaultText || status.textContent;
+        status.classList.add('show');
+      }
+      form.reset();
+    } catch (err) {
+      if (status) {
+        status.textContent = "Something went wrong sending this — please call 909.581.6603 or email DVcommercial@gmail.com directly.";
+        status.style.color = '#e08a8a';
+        status.classList.add('show');
+      }
+    } finally {
+      if (btn) { btn.disabled = false; btn.textContent = originalLabel; }
+    }
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+</script>
+</body>
+</html>
