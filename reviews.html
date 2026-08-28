@@ -596,7 +596,6 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;}
 </footer>
 
 <script>
-
 // Nav scroll state
 const nav = document.getElementById('siteNav');
 window.addEventListener('scroll', () => {
@@ -711,14 +710,18 @@ document.querySelectorAll('video.logo-video').forEach(video => {
     img.style.objectFit = 'cover';
     video.replaceWith(img);
   };
+  // Explicitly request playback via JS too, in case the autoplay attribute alone is being ignored
+  const tryPlay = () => { video.play().catch(() => {}); };
+  video.addEventListener('loadedmetadata', tryPlay);
+  tryPlay();
+
   video.addEventListener('error', swapToImage);
   video.addEventListener('stalled', swapToImage);
-  // If it hasn't started playing within 4s (blocked autoplay, slow load, etc.), fall back too
+  // If it hasn't started playing within 5s (blocked autoplay, slow load, 404, etc.), fall back too
   setTimeout(() => {
     if (video.readyState < 2 || video.paused) swapToImage();
-  }, 4000);
+  }, 5000);
 });
-
 </script>
 </body>
 </html>
