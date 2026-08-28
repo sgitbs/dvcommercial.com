@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daniel Valenzuela | Commercial Real Estate — MGR Real Estate</title>
-<meta name="description" content="Daniel Valenzuela, Sr. Commercial Associate at MGR Real Estate. Commercial real estate advisory for acquisitions, dispositions, leasing and investment across Southern California — experience approaching $500M in aggregate transaction activity.">
-<meta name="keywords" content="Daniel Valenzuela Commercial Real Estate, Commercial Real Estate Southern California, Commercial Real Estate Broker, Commercial Property for Sale, Commercial Property Leasing, Commercial Investment Properties, Owner User Commercial Real Estate, Fontana Commercial Real Estate, Inland Empire Commercial Real Estate">
+<title>About Daniel Valenzuela | Sr. Commercial Associate — MGR Real Estate</title>
+<meta name="description" content="About Daniel Valenzuela, Sr. Commercial Associate at MGR Real Estate — his approach to commercial real estate acquisitions, dispositions, leasing and investment strategy across Southern California.">
+<meta name="keywords" content="Daniel Valenzuela Commercial Real Estate, About Daniel Valenzuela, Commercial Real Estate Broker Southern California, MGR Real Estate">
 <link rel="icon" href="DV_Logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -436,6 +436,55 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;}
 
 /* utility */
 .center-text{text-align:center;}
+
+
+/* ============ SUBPAGE — page hero ============ */
+.page-hero{
+  position:relative;padding:170px 0 90px;overflow:hidden;text-align:center;
+}
+.page-hero .hero-ring{position:absolute;top:0;left:50%;width:640px;height:640px;border:1px solid var(--line);border-radius:50%;transform:translate(-50%,-38%);}
+.page-hero-logo{width:min(28vw,220px);height:min(28vw,220px);margin:0 auto 30px;position:relative;}
+.page-hero-logo .logo-loop{width:100%;height:100%;box-shadow:0 0 80px -14px rgba(201,162,39,0.35);}
+@media (max-width:768px){.page-hero-logo{width:min(40vw,160px);height:min(40vw,160px);}}
+.page-hero h1{font-size:clamp(30px,5vw,58px);text-transform:uppercase;line-height:1.1;position:relative;z-index:1;}
+.page-hero h1 em{font-style:italic;color:var(--gold-bright);}
+.page-hero p{max-width:600px;margin:22px auto 0;color:var(--white-dim);font-size:16px;font-weight:300;position:relative;z-index:1;}
+.breadcrumb{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--white-faint);position:relative;z-index:1;}
+.breadcrumb a{color:var(--white-dim);}
+.breadcrumb a:hover{color:var(--gold-bright);}
+
+/* ============ ABOUT PAGE — extended body ============ */
+.about-copy{max-width:760px;}
+.about-copy p{margin-top:22px;color:var(--white-dim);font-size:16px;font-weight:300;line-height:1.8;}
+.about-copy p:first-child{margin-top:0;}
+.pullquote{
+  margin:56px 0;padding:36px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,30px);color:var(--champagne);line-height:1.4;
+}
+.credential-strip{
+  display:flex;gap:0;flex-wrap:wrap;margin-top:60px;border-top:1px solid var(--line);
+}
+.credential-strip div{flex:1 1 200px;padding:26px 28px 26px 0;border-right:1px solid var(--line);}
+.credential-strip div:last-child{border-right:none;}
+.credential-strip .n{font-family:var(--serif);font-size:26px;color:var(--gold-bright);}
+.credential-strip .l{margin-top:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--white-faint);}
+@media (max-width:768px){.credential-strip div{flex:1 1 45%;border-right:none;border-bottom:1px solid var(--line);padding:20px 0;}}
+
+/* ============ REVIEWS PAGE ============ */
+.reviews-empty{
+  border:1px solid var(--line);padding:70px 50px;text-align:center;max-width:760px;margin:0 auto;
+}
+@media (max-width:600px){.reviews-empty{padding:44px 26px;}}
+.reviews-empty .mark{font-family:var(--serif);font-size:44px;color:var(--gold);opacity:.7;line-height:1;}
+.reviews-empty h3{margin-top:22px;font-size:24px;text-transform:uppercase;}
+.reviews-empty p{margin-top:18px;color:var(--white-dim);font-size:15px;font-weight:300;max-width:520px;margin-left:auto;margin-right:auto;}
+.reviews-empty .btn{margin-top:32px;}
+.review-placeholder-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:60px;}
+@media (max-width:900px){.review-placeholder-grid{grid-template-columns:1fr;}}
+.review-placeholder{background:var(--charcoal);padding:38px 32px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;}
+.review-placeholder .quote-mark{font-family:var(--serif);font-size:34px;color:var(--gold);opacity:.5;}
+.review-placeholder p{margin-top:16px;color:var(--white-faint);font-size:13.5px;font-style:italic;font-weight:300;}
+.review-placeholder .who{margin-top:20px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--white-faint);}
 </style>
 </head>
 <body>
@@ -444,19 +493,19 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;}
 
 <!-- ================= NAV ================= -->
 <header class="site-nav" id="siteNav">
-  <a href="#top" class="nav-brand">
+  <a href="index.html" class="nav-brand">
     <span class="logo-loop"><video class="logo-video" autoplay muted loop playsinline poster="DV_Logo.png" title="Daniel Valenzuela animated logo"><source src="DV_Logo.mp4" type="video/mp4"></video></span>
     <span class="brand-text">DANIEL VALENZUELA<span>Sr. Commercial Associate</span></span>
   </a>
   <nav class="nav-links" id="navLinks">
-    <a href="#opportunities" data-nav>Opportunities</a>
-    <a href="#services" data-nav>Services</a>
-    <a href="#property-types" data-nav>Property Types</a>
-    <a href="#featured" data-nav>Featured</a>
+    <a href="index.html#opportunities" data-nav>Opportunities</a>
+    <a href="index.html#services" data-nav>Services</a>
+    <a href="index.html#property-types" data-nav>Property Types</a>
+    <a href="index.html#featured" data-nav>Featured</a>
     <a href="about.html" data-nav>About</a>
     <a href="reviews.html" data-nav>Reviews</a>
-    <a href="#insights" data-nav>Insights</a>
-    <a href="#contact" class="nav-cta" data-nav>Contact Daniel</a>
+    <a href="index.html#insights" data-nav>Insights</a>
+    <a href="index.html#contact" class="nav-cta" data-nav>Contact Daniel</a>
   </nav>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -468,419 +517,73 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;}
   <a href="mailto:DVcommercial@gmail.com" class="email">Email</a>
 </div>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="top">
-  <div class="hero-bg">
-    <div class="hero-ring"></div>
-    <div class="hero-ring r2"></div>
-    <svg viewBox="0 0 1600 420" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <g fill="none" stroke="#c9a227" stroke-width="1">
-        <rect x="120" y="180" width="70" height="240" opacity="0.35"/>
-        <rect x="210" y="120" width="54" height="300" opacity="0.5"/>
-        <rect x="285" y="220" width="40" height="200" opacity="0.3"/>
-        <polygon points="360,420 360,90 400,40 440,90 440,420" opacity="0.6"/>
-        <rect x="470" y="160" width="60" height="260" opacity="0.3"/>
-        <rect x="1010" y="150" width="50" height="270" opacity="0.35"/>
-        <polygon points="1090,420 1090,60 1135,20 1180,60 1180,420" opacity="0.55"/>
-        <rect x="1210" y="200" width="44" height="220" opacity="0.3"/>
-        <rect x="1280" y="130" width="58" height="290" opacity="0.4"/>
-        <rect x="1370" y="230" width="36" height="190" opacity="0.25"/>
-      </g>
-    </svg>
-    <div class="hero-vignette"></div>
-  </div>
-
-  <div class="hero-content">
-    <div class="hero-logo-wrap">
+<!-- ================= PAGE HERO ================= -->
+<section class="page-hero" id="top">
+  <div class="hero-ring"></div>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; About</div>
+    <div class="page-hero-logo">
       <span class="logo-loop"><video class="logo-video" autoplay muted loop playsinline poster="DV_Logo.png" title="Daniel Valenzuela animated logo"><source src="DV_Logo.mp4" type="video/mp4"></video></span>
     </div>
-    <h1>Commercial Real Estate.<br><em>Strategically Executed.</em></h1>
-    <p class="sub">Commercial real estate advisory for acquisitions, dispositions, leasing, investment and strategic property opportunities throughout Southern California.</p>
-
-    <div class="hero-stat">
-      <div class="num">NEARLY $500M</div>
-      <div class="label">In Commercial Real Estate Transaction Experience*</div>
-      <div class="fine">*Experience across commercial acquisitions, dispositions and leasing transactions.</div>
-    </div>
-
-    <div class="hero-actions">
-      <a href="#opportunities" class="btn btn-primary">Explore Opportunities</a>
-      <a href="#contact" class="btn btn-outline">Contact Daniel</a>
-    </div>
-    <div class="hero-contact">
-      <a href="tel:9095816603">909.581.6603</a>
-      <a href="mailto:DVcommercial@gmail.com">DVcommercial@gmail.com</a>
-    </div>
-  </div>
-
-  <div class="scroll-ind"><div class="line"></div><span>Scroll</span></div>
-</section>
-
-<!-- ================= SECTION 2 — DIFFERENCE ================= -->
-<section id="difference">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">The Daniel Valenzuela Difference</span>
-      <h2>Real estate is the asset.<br><em>Strategy creates the opportunity.</em></h2>
-      <p>Commercial real estate decisions require more than simply finding a property. Every acquisition, disposition or lease involves location, financial structure, market positioning, negotiation, operational objectives and long-term strategy. Daniel Valenzuela works with investors, property owners and business operators to evaluate commercial real estate opportunities from a broader strategic perspective.</p>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="pillars reveal-stagger reveal">
-      <div class="pillar">
-        <svg class="icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1"><rect x="10" y="4" width="20" height="32"/><path d="M15 12h4M21 12h4M15 19h4M21 19h4M15 26h4M21 26h4"/></svg>
-        <h3>Acquisition</h3>
-        <p>Identify and evaluate commercial opportunities aligned with investment and operational objectives.</p>
-      </div>
-      <div class="pillar">
-        <svg class="icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1"><path d="M8 30l10-10 6 6 10-14"/><path d="M28 12h6v6"/></svg>
-        <h3>Disposition</h3>
-        <p>Position commercial properties for the market and develop strategies designed to attract qualified buyers.</p>
-      </div>
-      <div class="pillar">
-        <svg class="icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 34h28M10 34V14l8-6 8 6v20"/><path d="M15 34v-9h6v9"/></svg>
-        <h3>Leasing</h3>
-        <p>Represent landlords and tenants in commercial leasing strategies, negotiations and site opportunities.</p>
-      </div>
-      <div class="pillar">
-        <svg class="icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1"><circle cx="20" cy="20" r="14"/><path d="M20 12v8l6 4"/></svg>
-        <h3>Investment Strategy</h3>
-        <p>Evaluate property characteristics, positioning, potential use and long-term real estate objectives.</p>
-      </div>
-    </div>
+    <span class="eyebrow" style="justify-content:center;">About Daniel</span>
+    <h1 style="margin-top:18px;">Strategy first.<br><em>Execution always.</em></h1>
+    <p>Sr. Commercial Associate at MGR Real Estate, working with investors, property owners and business operators across Southern California's commercial real estate markets.</p>
   </div>
 </section>
 
-<!-- ================= SECTION 3 — BIG NUMBER ================= -->
-<section class="section-alt big-number-section" id="experience">
-  <div class="ring-deco"></div>
-  <div class="wrap reveal">
-    <span class="eyebrow" style="justify-content:center;">Transaction Experience</span>
-    <div class="big-number" style="margin-top:20px;">NEARLY<br><span class="cur">$</span><span data-count="500">0</span>M</div>
-    <div class="big-number-label">Commercial Real Estate Transaction Experience</div>
-    <p class="big-number-sub">Leadership and involvement across commercial property acquisitions, dispositions and leasing transactions approaching half a billion dollars in aggregate transaction activity.</p>
-    <div class="metric-row">
-      <div class="metric"><span>Acquisitions</span></div>
-      <div class="metric"><span>Dispositions</span></div>
-      <div class="metric"><span>Leasing</span></div>
-      <div class="metric"><span>Owner-User</span></div>
-      <div class="metric"><span>Investment</span></div>
-      <div class="metric"><span>Commercial Development</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SECTION 4 — SERVICES ================= -->
-<section id="services">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Commercial Services</span>
-      <h2>Commercial real estate without<br>the <em>one-size-fits-all</em> approach.</h2>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="services-grid reveal-stagger reveal">
-      <div class="service-card"><div class="num">01</div><div><h3>Commercial Property Sales</h3><p>Commercial property marketing, positioning, negotiation and disposition strategy.</p></div></div>
-      <div class="service-card"><div class="num">02</div><div><h3>Commercial Acquisitions</h3><p>Property identification, evaluation, negotiations and strategic acquisition support.</p></div></div>
-      <div class="service-card"><div class="num">03</div><div><h3>Landlord Representation</h3><p>Marketing and leasing strategy designed to position commercial space for qualified occupants.</p></div></div>
-      <div class="service-card"><div class="num">04</div><div><h3>Tenant Representation</h3><p>Site selection and commercial lease negotiation aligned with operational objectives.</p></div></div>
-      <div class="service-card"><div class="num">05</div><div><h3>Owner-User Real Estate</h3><p>Helping business owners evaluate the transition from leasing space to controlling their commercial real estate.</p></div></div>
-      <div class="service-card"><div class="num">06</div><div><h3>Investment Properties</h3><p>Evaluation and representation involving income-producing and value-add commercial real estate.</p></div></div>
-      <div class="service-card"><div class="num">07</div><div><h3>Land &amp; Development Opportunities</h3><p>Evaluation of commercial land, redevelopment and repositioning opportunities.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SECTION 5 — PROPERTY TYPES ================= -->
-<section class="section-alt" id="property-types">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Property Types</span>
-      <h2>Representing every category<br>of <em>commercial asset.</em></h2>
-    </div>
-    <div class="ptype-grid reveal-stagger reveal">
-      <div class="ptype"><span>Retail</span></div>
-      <div class="ptype"><span>Restaurant</span></div>
-      <div class="ptype"><span>Office</span></div>
-      <div class="ptype"><span>Medical</span></div>
-      <div class="ptype"><span>Industrial</span></div>
-      <div class="ptype"><span>Multifamily Investment</span></div>
-      <div class="ptype"><span>Land</span></div>
-      <div class="ptype"><span>Owner-User</span></div>
-      <div class="ptype"><span>Mixed Commercial</span></div>
-      <div class="ptype"><span>Development / Repositioning</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SECTION 6 — FEATURED ================= -->
-<section id="featured">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Featured Opportunity</span>
-      <h2>A current commercial<br><em>investment opportunity.</em></h2>
-    </div>
-    <div class="featured reveal">
-      <div class="featured-visual">
-        <div class="featured-badge">Lease · Option to Purchase · Sale</div>
-        <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#c9a227" stroke-width="1">
-          <rect x="40" y="120" width="220" height="110" opacity="0.5"/>
-          <rect x="70" y="70" width="70" height="60" opacity="0.6"/>
-          <rect x="160" y="90" width="50" height="40" opacity="0.4"/>
-          <circle cx="150" cy="150" r="90" opacity="0.25"/>
-          <path d="M40 230h220" opacity="0.6"/>
-        </svg>
-      </div>
-      <div class="featured-body">
-        <span class="tag">Fontana Commercial</span>
-        <h3>Fontana Commercial<br>Investment Opportunity</h3>
-        <div class="loc">15395 Foothill Blvd, Fontana, CA 92335</div>
-        <div class="featured-list">
-          <div>±0.94 Acre Parcel</div>
-          <div>±7,806 SF Existing Improvements</div>
-          <div>±5,200 SF Fully Built-Out Restaurant</div>
-          <div>30+ Surface Parking Spaces</div>
-          <div>Multiple Existing Structures</div>
-          <div>Lease with Option to Purchase Available</div>
-          <div>Commercial Repositioning Potential</div>
-        </div>
-        <div class="featured-actions">
-          <a href="#contact" class="btn btn-primary">View Property</a>
-          <a href="#contact" class="btn btn-outline">Schedule Private Tour</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SECTION 7 — ACQUISITION ================= -->
-<section class="section-alt" id="opportunities">
-  <div class="wrap">
-    <div class="form-section-grid">
-      <div class="section-head reveal" style="margin-bottom:0;">
-        <span class="eyebrow">For Buyers &amp; Investors</span>
-        <h2>Looking for your next<br><em>commercial acquisition?</em></h2>
-        <p>Whether you're seeking an owner-user property, income-producing asset, development opportunity or strategic commercial location, Daniel works with clients to identify opportunities aligned with their objectives.</p>
-      </div>
-      <form class="form-card reveal" data-form="acquisition" data-subject="New Commercial Acquisition Inquiry — dvcommercial.com">
-        <input type="hidden" name="access_key" value="98b83c71-00f2-44f2-9db6-cecce9b5eea7">
-        <input type="hidden" name="subject" value="New Commercial Acquisition Inquiry — dvcommercial.com">
-        <input type="hidden" name="from_name" value="dvcommercial.com — Acquisition Form">
-        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="field-row">
-          <div class="field"><label for="a-name">Name</label><input id="a-name" name="name" type="text" required></div>
-          <div class="field"><label for="a-company">Company</label><input id="a-company" name="company" type="text"></div>
-        </div>
-        <div class="field-row">
-          <div class="field"><label for="a-phone">Phone</label><input id="a-phone" name="phone" type="tel" required></div>
-          <div class="field"><label for="a-email">Email</label><input id="a-email" name="email" type="email" required></div>
-        </div>
-        <div class="field">
-          <label>I'm Looking For</label>
-          <div class="checkbox-tags">
-            <label><input type="checkbox" name="looking_for" value="Retail"><span>Retail</span></label>
-            <label><input type="checkbox" name="looking_for" value="Industrial"><span>Industrial</span></label>
-            <label><input type="checkbox" name="looking_for" value="Office"><span>Office</span></label>
-            <label><input type="checkbox" name="looking_for" value="Restaurant"><span>Restaurant</span></label>
-            <label><input type="checkbox" name="looking_for" value="Medical"><span>Medical</span></label>
-            <label><input type="checkbox" name="looking_for" value="Investment Property"><span>Investment Property</span></label>
-            <label><input type="checkbox" name="looking_for" value="Land"><span>Land</span></label>
-            <label><input type="checkbox" name="looking_for" value="Development"><span>Development</span></label>
-            <label><input type="checkbox" name="looking_for" value="Owner-User"><span>Owner-User</span></label>
-            <label><input type="checkbox" name="looking_for" value="Other"><span>Other</span></label>
-          </div>
-        </div>
-        <div class="field-row">
-          <div class="field"><label for="a-range">Investment / Purchase Range</label><input id="a-range" name="range" type="text" placeholder="e.g. $1M – $5M"></div>
-          <div class="field"><label for="a-markets">Preferred Markets</label><input id="a-markets" name="markets" type="text"></div>
-        </div>
-        <div class="field"><label for="a-message">Message</label><textarea id="a-message" name="message"></textarea></div>
-        <button type="submit" class="btn btn-primary" style="width:100%;">Start My Property Search</button>
-        <p class="form-note">Fields marked required must be completed. Daniel will respond directly.</p>
-        <p class="form-status">Thank you — your inquiry has been received. Daniel will be in touch shortly.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SECTION 8 — SELL ================= -->
-<section id="sell">
-  <div class="wrap">
-    <div class="form-section-grid">
-      <div class="section-head reveal" style="margin-bottom:0;">
-        <span class="eyebrow">For Property Owners</span>
-        <h2>Position your property<br>for its <em>next chapter.</em></h2>
-        <p>Selling commercial real estate requires more than placing a property online. Daniel works to understand the asset, identify its most compelling positioning, develop the marketing narrative and expose the opportunity to qualified buyers.</p>
-      </div>
-      <form class="form-card reveal" data-form="sell" data-subject="New Property Review Request — dvcommercial.com">
-        <input type="hidden" name="access_key" value="98b83c71-00f2-44f2-9db6-cecce9b5eea7">
-        <input type="hidden" name="subject" value="New Property Review Request — dvcommercial.com">
-        <input type="hidden" name="from_name" value="dvcommercial.com — Sell Form">
-        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="field"><label for="s-address">Property Address</label><input id="s-address" name="address" type="text" required></div>
-        <div class="field-row">
-          <div class="field"><label for="s-type">Property Type</label><input id="s-type" name="type" type="text" placeholder="Retail, Office, Industrial…"></div>
-          <div class="field"><label for="s-occupancy">Occupancy</label><input id="s-occupancy" name="occupancy" type="text"></div>
-        </div>
-        <div class="field-row">
-          <div class="field"><label for="s-bsize">Approx. Building Size</label><input id="s-bsize" name="building_size" type="text" placeholder="SF"></div>
-          <div class="field"><label for="s-lsize">Approx. Land Size</label><input id="s-lsize" name="land_size" type="text" placeholder="Acres / SF"></div>
-        </div>
-        <div class="field-row">
-          <div class="field"><label for="s-owner">Owner Name</label><input id="s-owner" name="owner_name" type="text" required></div>
-          <div class="field"><label for="s-phone">Phone</label><input id="s-phone" name="phone" type="tel" required></div>
-        </div>
-        <div class="field"><label for="s-email">Email</label><input id="s-email" name="email" type="email" required></div>
-        <div class="field"><label for="s-comments">Comments</label><textarea id="s-comments" name="comments"></textarea></div>
-        <button type="submit" class="btn btn-primary" style="width:100%;">Request Property Review</button>
-        <p class="form-status">Thank you — your property review request has been received.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SECTION 9 — LEASING ================= -->
-<section class="section-alt" id="leasing">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Leasing</span>
-      <h2>Landlords. Tenants.<br><em>One strategic objective.</em></h2>
-    </div>
-    <div class="split reveal">
-      <div class="split-half">
-        <span class="tag">Landlord Representation</span>
-        <h3>For Property Owners</h3>
-        <ul>
-          <li>Property positioning</li>
-          <li>Marketing strategy</li>
-          <li>Tenant targeting</li>
-          <li>Lease negotiations</li>
-          <li>Commercial exposure</li>
-        </ul>
-      </div>
-      <div class="split-half">
-        <span class="tag">Tenant Representation</span>
-        <h3>For Businesses</h3>
-        <ul>
-          <li>Site selection</li>
-          <li>Market evaluation</li>
-          <li>Lease analysis</li>
-          <li>Negotiation</li>
-          <li>Expansion strategy</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SECTION 10 — ABOUT ================= -->
-<section id="about">
+<!-- ================= ABOUT BODY ================= -->
+<section class="section-alt">
   <div class="wrap">
     <div class="about-grid">
       <div class="about-portrait reveal">
         <div class="ring"></div>
-        <span class="logo-loop"><video class="logo-video" autoplay muted loop playsinline preload="metadata" poster="DV_Logo.png" title="Daniel Valenzuela animated logo"><source src="DV_Logo.mp4" type="video/mp4"></video></span>
+        <span class="logo-loop"><video class="logo-video" autoplay muted loop playsinline poster="DV_Logo.png" title="Daniel Valenzuela animated logo"><source src="DV_Logo.mp4" type="video/mp4"></video></span>
       </div>
-      <div class="about-body reveal">
-        <span class="eyebrow">About Daniel</span>
-        <h2>Daniel Valenzuela</h2>
-        <div class="role">Sr. Commercial Associate — MGR Real Estate</div>
+      <div class="about-copy reveal">
         <p>Daniel Valenzuela approaches commercial real estate with a focus on strategy, negotiation and long-term client objectives. His experience spans acquisitions, dispositions and leasing assignments involving a broad range of commercial properties and clients.</p>
         <p>From business owners evaluating their first owner-user property to investors and property owners navigating larger commercial opportunities, Daniel's objective remains consistent: understand the opportunity, structure the strategy and execute with purpose.</p>
+        <p>Every engagement starts the same way — with the client's objective, not the listing. Whether the goal is acquiring a first owner-user building, disposing of a legacy asset, structuring a lease that supports an operating business, or positioning a property for its next use, Daniel works to understand what success actually looks like for that client before recommending a direction.</p>
+        <p>That process typically means evaluating the property itself, the market it sits in, the financial structure behind the decision, and the timeline the client is working against — then building a strategy around those specifics rather than defaulting to a one-size-fits-all approach. Negotiation is treated as a structured part of that strategy, not an afterthought once an offer is on the table.</p>
+        <p>Clients working with Daniel are typically involved directly with him throughout a transaction, from initial evaluation through closing — commercial real estate decisions carry enough complexity, and enough consequence, that they deserve direct, informed representation at every stage.</p>
+        <div class="pullquote">"Understand the opportunity, structure the strategy, execute with purpose."</div>
+        <p>Daniel's experience reflects leadership across nearly $500 million in commercial real estate acquisitions, dispositions and leasing transactions* — activity that spans owner-user, investment, retail, industrial, office and mixed commercial assets throughout the Inland Empire, Los Angeles County, Orange County and the broader Southern California market.</p>
+        <p style="font-size:12px;color:var(--white-faint);font-style:italic;margin-top:14px;">*Experience contributing to and leading commercial real estate transactions approaching $500 million in aggregate transaction activity across acquisitions, dispositions and leasing.</p>
         <div class="about-signoff">Your vision. My commitment.</div>
-        <div class="hero-actions" style="justify-content:flex-start;margin-top:38px;">
-          <a href="about.html" class="btn btn-outline">Read Daniel's Full Story</a>
-          <a href="reviews.html" class="btn btn-outline">Client Reviews</a>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= SECTION 11 — WHY ================= -->
-<section class="section-alt" id="why">
+<!-- ================= WHY WORK WITH DANIEL ================= -->
+<section>
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Why Commercial Clients Work With Daniel</span>
       <h2>Built on <em>substance</em>,<br>not sales language.</h2>
     </div>
     <div class="why-list reveal-stagger reveal">
-      <div class="why-item"><span class="idx">I.</span><h3>Market Perspective</h3></div>
-      <div class="why-item"><span class="idx">II.</span><h3>Negotiation</h3></div>
-      <div class="why-item"><span class="idx">III.</span><h3>Property Positioning</h3></div>
-      <div class="why-item"><span class="idx">IV.</span><h3>Transaction Strategy</h3></div>
-      <div class="why-item"><span class="idx">V.</span><h3>Long-Term Relationships</h3></div>
+      <div class="why-item"><span class="idx">I.</span><div><h3>Market Perspective</h3><p style="margin-top:8px;font-size:14px;color:var(--white-dim);font-weight:300;max-width:520px;">A grounded read on where a property or market stands today, and what that means for the decision at hand.</p></div></div>
+      <div class="why-item"><span class="idx">II.</span><div><h3>Negotiation</h3><p style="margin-top:8px;font-size:14px;color:var(--white-dim);font-weight:300;max-width:520px;">Structured, prepared negotiation aimed at outcomes that hold up — not just an accepted offer.</p></div></div>
+      <div class="why-item"><span class="idx">III.</span><div><h3>Property Positioning</h3><p style="margin-top:8px;font-size:14px;color:var(--white-dim);font-weight:300;max-width:520px;">Identifying what makes an asset compelling to the right buyer, tenant or investor — and building the narrative around it.</p></div></div>
+      <div class="why-item"><span class="idx">IV.</span><div><h3>Transaction Strategy</h3><p style="margin-top:8px;font-size:14px;color:var(--white-dim);font-weight:300;max-width:520px;">A plan built around the client's actual objective, from first evaluation through closing.</p></div></div>
+      <div class="why-item"><span class="idx">V.</span><div><h3>Long-Term Relationships</h3><p style="margin-top:8px;font-size:14px;color:var(--white-dim);font-weight:300;max-width:520px;">Representation built around trust that extends well past a single transaction.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- ================= SECTION 12 — SOCAL ================= -->
-<section id="socal">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Coverage</span>
-      <h2>Commercial real estate<br>across <em>Southern California.</em></h2>
-    </div>
-    <div class="map-wrap reveal">
-      <svg viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#c9a227" stroke-width="1">
-        <path d="M120 30 C 90 90, 70 150, 90 210 C 105 260, 150 300, 170 350 C 185 380, 210 400, 240 405" opacity="0.55"/>
-        <circle cx="150" cy="120" r="3" fill="#e3bd4d" stroke="none"/>
-        <circle cx="180" cy="200" r="3" fill="#e3bd4d" stroke="none"/>
-        <circle cx="200" cy="270" r="3" fill="#e3bd4d" stroke="none"/>
-        <circle cx="230" cy="330" r="3" fill="#e3bd4d" stroke="none"/>
-        <circle cx="130" cy="60" r="3" fill="#e3bd4d" stroke="none"/>
-        <circle cx="215" cy="300" r="60" opacity="0.2"/>
-        <circle cx="215" cy="300" r="100" opacity="0.12"/>
-      </svg>
-    </div>
-    <div class="section-head center reveal" style="margin-top:10px;">
-      <p>Serving investors, property owners and business operators across the Inland Empire, Los Angeles County, Orange County and surrounding Southern California commercial markets.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SECTION 13 — INSIGHTS ================= -->
-<section class="section-alt" id="insights">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Insights</span>
-      <h2>Commercial real estate,<br><em>examined.</em></h2>
-    </div>
-    <div class="insights-grid reveal-stagger reveal">
-      <div class="insight-card"><span class="cat">Acquisitions</span><div><h3>Commercial Acquisitions</h3><div class="arrow">→</div></div></div>
-      <div class="insight-card"><span class="cat">Strategy</span><div><h3>Investment Strategy</h3><div class="arrow">→</div></div></div>
-      <div class="insight-card"><span class="cat">Owner-User</span><div><h3>Owner-User Real Estate</h3><div class="arrow">→</div></div></div>
-      <div class="insight-card"><span class="cat">Leasing</span><div><h3>Commercial Leasing</h3><div class="arrow">→</div></div></div>
-      <div class="insight-card"><span class="cat">Repositioning</span><div><h3>Property Repositioning</h3><div class="arrow">→</div></div></div>
-      <div class="insight-card"><span class="cat">Markets</span><div><h3>Market Opportunities</h3><div class="arrow">→</div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SECTION 14 — FINAL CTA ================= -->
-<section class="final-cta" id="contact">
-  <svg class="skyline" viewBox="0 0 1600 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#c9a227" stroke-width="1">
-    <rect x="80" y="140" width="60" height="160" opacity="0.3"/>
-    <polygon points="220,300 220,60 260,20 300,60 300,300" opacity="0.5"/>
-    <rect x="360" y="180" width="40" height="120" opacity="0.25"/>
-    <rect x="1180" y="160" width="50" height="140" opacity="0.3"/>
-    <polygon points="1300,300 1300,50 1345,10 1390,50 1390,300" opacity="0.5"/>
-    <rect x="1440" y="190" width="36" height="110" opacity="0.25"/>
-  </svg>
+<!-- ================= CTA ================= -->
+<section class="section-alt final-cta">
   <div class="wrap reveal">
-    <span class="eyebrow" style="justify-content:center;">Let's Discuss The Opportunity</span>
-    <h2 style="margin-top:22px;">What's your<br>next commercial move?</h2>
-    <div class="stack">Acquiring. Selling. Leasing. Investing. Repositioning.</div>
+    <span class="eyebrow" style="justify-content:center;">Let's Talk</span>
+    <h2 style="margin-top:22px;font-size:clamp(28px,4.5vw,52px);">Ready to discuss<br>your next move?</h2>
     <div class="contact-block">
       <div class="name">Daniel Valenzuela</div>
       <div class="role">Sr. Commercial Associate — MGR Real Estate</div>
-      <div class="digits">
-        <a href="tel:9095816603">909.581.6603</a>·<a href="mailto:DVcommercial@gmail.com">DVcommercial@gmail.com</a>
-      </div>
+      <div class="digits"><a href="tel:9095816603">909.581.6603</a>·<a href="mailto:DVcommercial@gmail.com">DVcommercial@gmail.com</a></div>
     </div>
     <div class="final-actions">
       <a href="mailto:DVcommercial@gmail.com" class="btn btn-primary">Speak With Daniel</a>
-      <a href="#opportunities" class="btn btn-outline">Explore Opportunities</a>
+      <a href="index.html#opportunities" class="btn btn-outline">Explore Opportunities</a>
     </div>
   </div>
 </section>
@@ -907,6 +610,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;}
 </footer>
 
 <script>
+
 // Nav scroll state
 const nav = document.getElementById('siteNav');
 window.addEventListener('scroll', () => {
@@ -1028,6 +732,7 @@ document.querySelectorAll('video.logo-video').forEach(video => {
     if (video.readyState < 2 || video.paused) swapToImage();
   }, 4000);
 });
+
 </script>
 </body>
 </html>
