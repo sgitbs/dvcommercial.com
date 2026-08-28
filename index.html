@@ -86,6 +86,10 @@ header.site-nav.scrolled{
 .nav-brand{display:flex;align-items:center;gap:12px;}
 .nav-brand img{height:38px;width:auto;transition:height .4s var(--ease);}
 header.site-nav.scrolled .nav-brand img{height:30px;}
+.logo-loop{position:relative;overflow:hidden;flex:none;background:var(--black);}
+.logo-loop iframe{position:absolute;top:50%;left:50%;width:100%;height:100%;transform:translate(-50%,-50%);border:0;pointer-events:none;}
+.nav-brand .logo-loop{width:38px;height:38px;border-radius:3px;transition:width .4s var(--ease),height .4s var(--ease);}
+header.site-nav.scrolled .nav-brand .logo-loop{width:30px;height:30px;}
 .nav-brand .brand-text{font-family:var(--serif);font-size:16px;letter-spacing:.08em;line-height:1.2;}
 .nav-brand .brand-text span{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-top:2px;}
 nav.nav-links{display:flex;gap:36px;align-items:center;}
@@ -150,7 +154,10 @@ nav.nav-links a:hover::after{width:100%;}
 @media (max-width:768px){.hero-ring{width:520px;height:520px;} .hero-ring.r2{width:640px;height:640px;}}
 
 .hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;text-align:center;}
-.hero-logo{width:96px;margin:0 auto 34px;opacity:0;animation:fadeUp 1s var(--ease) .1s forwards;}
+.hero-logo-wrap{width:clamp(150px,22vw,260px);height:clamp(150px,22vw,260px);margin:0 auto 30px;opacity:0;animation:fadeUp 1s var(--ease) .1s forwards;position:relative;}
+.hero-logo-wrap::before{content:'';position:absolute;inset:-18px;border:1px solid var(--line);border-radius:50%;animation:spinSlow 60s linear infinite;}
+.hero-logo-wrap .logo-loop{width:100%;height:100%;border-radius:50%;}
+@keyframes spinSlow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
 .hero h1{
   font-size:clamp(38px,6vw,84px);line-height:1.04;letter-spacing:-0.015em;
   text-transform:uppercase;color:var(--white);
@@ -367,8 +374,8 @@ section{position:relative;padding:150px 0;}
   background:radial-gradient(circle at 50% 35%, rgba(201,162,39,0.09), transparent 60%), linear-gradient(165deg,#1b1a17,#0a0a09 70%);
   display:flex;align-items:center;justify-content:center;
 }
-.about-portrait .ring{position:absolute;width:78%;aspect-ratio:1;border:1px solid var(--line);border-radius:50%;}
-.about-portrait .mono{font-family:var(--serif);font-size:96px;color:var(--gold);opacity:.85;position:relative;z-index:1;}
+.about-portrait .ring{position:absolute;width:78%;aspect-ratio:1;border:1px solid var(--line);border-radius:50%;pointer-events:none;}
+.about-portrait .logo-loop{width:66%;aspect-ratio:1;border-radius:50%;position:relative;z-index:1;}
 .about-body .eyebrow{margin-bottom:20px;}
 .about-body h2{font-size:clamp(28px,4vw,44px);text-transform:uppercase;line-height:1.15;}
 .about-body .role{margin-top:10px;font-size:13px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;}
@@ -419,6 +426,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;}
 .footer-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:36px;}
 .footer-brand{display:flex;align-items:center;gap:14px;}
 .footer-brand img{height:34px;}
+.footer-brand .logo-loop{width:34px;height:34px;border-radius:3px;}
 .footer-brand .t{font-family:var(--serif);font-size:15px;}
 .footer-brand .t span{display:block;font-family:var(--sans);font-size:10px;color:var(--white-faint);letter-spacing:.12em;margin-top:3px;}
 .footer-contact{font-size:13px;color:var(--white-dim);text-align:right;}
@@ -436,7 +444,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;}
 <!-- ================= NAV ================= -->
 <header class="site-nav" id="siteNav">
   <a href="#top" class="nav-brand">
-    <img src="DV_Logo.png" alt="Daniel Valenzuela logo">
+    <span class="logo-loop"><iframe src="https://player.vimeo.com/video/1222184786?h=989643e3a5&background=1" title="Daniel Valenzuela animated logo" allow="autoplay; fullscreen"></iframe></span>
     <span class="brand-text">DANIEL VALENZUELA<span>Sr. Commercial Associate</span></span>
   </a>
   <nav class="nav-links" id="navLinks">
@@ -481,7 +489,9 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;}
   </div>
 
   <div class="hero-content">
-    <img src="DV_Logo.png" alt="DV monogram" class="hero-logo">
+    <div class="hero-logo-wrap">
+      <span class="logo-loop"><iframe src="https://player.vimeo.com/video/1222184786?h=989643e3a5&background=1" title="Daniel Valenzuela animated logo" allow="autoplay; fullscreen"></iframe></span>
+    </div>
     <h1>Commercial Real Estate.<br><em>Strategically Executed.</em></h1>
     <p class="sub">Commercial real estate advisory for acquisitions, dispositions, leasing, investment and strategic property opportunities throughout Southern California.</p>
 
@@ -759,7 +769,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;}
     <div class="about-grid">
       <div class="about-portrait reveal">
         <div class="ring"></div>
-        <span class="mono">DV</span>
+        <span class="logo-loop"><iframe src="https://player.vimeo.com/video/1222184786?h=989643e3a5&background=1" title="Daniel Valenzuela animated logo" allow="autoplay; fullscreen" loading="lazy"></iframe></span>
       </div>
       <div class="about-body reveal">
         <span class="eyebrow">About Daniel</span>
@@ -866,7 +876,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 120px;}
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="DV_Logo.png" alt="DV logo">
+        <span class="logo-loop"><iframe src="https://player.vimeo.com/video/1222184786?h=989643e3a5&background=1" title="Daniel Valenzuela animated logo" allow="autoplay; fullscreen" loading="lazy"></iframe></span>
         <div class="t">Daniel Valenzuela<span>Sr. Commercial Associate · MGR Real Estate</span></div>
       </div>
       <div class="footer-contact">
