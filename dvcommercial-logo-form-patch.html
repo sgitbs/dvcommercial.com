@@ -1,0 +1,58 @@
+<!--
+DV COMMERCIAL — LOGO + CONTACT PATCH
+
+Use these replacements in the CURRENT index.html you deployed.
+This patch assumes Daniel-V-Animated-Logo.mp4 is uploaded in the same GitHub folder as index.html.
+-->
+
+<!-- 1) REPLACE THE LARGE STATIC HERO LOGO / LOGO IMAGE BLOCK WITH THIS -->
+<div class="hero-logo-wrap" aria-label="Daniel Valenzuela, Sr. Commercial Associate, MGR Real Estate Inc.">
+  <video class="hero-logo-video" autoplay muted playsinline loop preload="metadata" poster="DV_Logo.png">
+    <source src="Daniel-V-Animated-Logo.mp4" type="video/mp4">
+    <img src="DV_Logo.png" alt="Daniel Valenzuela — Sr. Commercial Associate, MGR Real Estate Inc.">
+  </video>
+</div>
+
+<!-- 2) REPLACE EVERY "Contact Daniel" LINK WITH THIS -->
+<a href="#contact-form" class="btn btn-primary">Contact Daniel</a>
+
+<!-- 3) IF A LINK CURRENTLY LOOKS LIKE THIS, CHANGE IT -->
+<!-- OLD: <a href="mailto:DVcommercial@gmail.com" ...>Contact Daniel</a> -->
+<!-- NEW: <a href="#contact-form" ...>Contact Daniel</a> -->
+
+<!-- 4) ADD id="contact-form" TO THE FORM TAG -->
+<form id="contact-form" action="https://formsubmit.co/DVcommercial@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="New DV Commercial website inquiry">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <!-- Keep the existing form fields inside this form. Every field must have a name="..." attribute. -->
+</form>
+
+<!-- 5) ADD THIS CSS AT THE END OF YOUR <style> SECTION -->
+<style>
+.hero-logo-wrap{
+  width:min(625px,86vw);
+  aspect-ratio:1/1;
+  margin:0 auto 46px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:#050504;
+}
+.hero-logo-video{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:contain;
+  background:#050504;
+}
+#contact-form{scroll-margin-top:110px}
+</style>
+
+<!--
+TEST CHECKLIST AFTER DEPLOYMENT:
+1. Confirm Daniel-V-Animated-Logo.mp4 is at the repository root, alongside index.html.
+2. Click Contact Daniel. It should scroll to the form with id="contact-form".
+3. Submit a test inquiry. FormSubmit will send a ONE-TIME activation email to DVcommercial@gmail.com.
+4. Daniel must click the activation link. After activation, future submissions will be delivered to that inbox.
+-->
