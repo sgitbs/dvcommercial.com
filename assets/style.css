@@ -17,7 +17,7 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{
-  background:linear-gradient(180deg, rgba(5,5,4,0.96) 0%, rgba(5,5,4,0.98) 100%), url('assets/images/hero-architecture.jpg') center top/cover no-repeat fixed;
+  background:linear-gradient(180deg, rgba(5,5,4,0.96) 0%, rgba(5,5,4,0.98) 100%), url('images/hero-architecture.jpg') center top/cover no-repeat fixed;
   background-color:var(--black);
   color:var(--text);
   font-family:'Inter',sans-serif;
@@ -116,7 +116,7 @@ nav.primary-nav a.active{color:var(--gold); background:rgba(198,161,91,0.10); bo
   min-height:90vh;
   display:flex; align-items:flex-end;
   padding:120px 0 90px;
-  background:linear-gradient(180deg, rgba(5,5,4,0.4) 0%, rgba(5,5,4,0.6) 55%, var(--black) 100%), url('assets/images/hero-architecture.jpg') center/cover no-repeat;
+  background:linear-gradient(180deg, rgba(5,5,4,0.4) 0%, rgba(5,5,4,0.6) 55%, var(--black) 100%), url('images/hero-architecture.jpg') center/cover no-repeat;
   background-color:var(--panel);
   overflow:hidden;
 }
