@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Daniel Valenzuela | DV Commercial</title>
+<meta name="description" content="Contact Daniel Valenzuela for commercial real estate acquisition, disposition, leasing, or investment advisory across Southern California.">
+<link rel="icon" type="image/png" href="assets/images/DV_Logo.png">
+<link rel="stylesheet" href="assets/site-styles-v2.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-mark">
+      <div class="logo-video-box">
+        <video autoplay muted loop playsinline preload="auto" poster="assets/images/logo-emblem.png" aria-hidden="true">
+          <source src="assets/videos/Daniel-V-Animated-Logo.mp4" type="video/mp4">
+        </video>
+      </div>
+      <span class="logo-text">DV COMMERCIAL<span>Real Estate Advisory</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+    <nav class="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Daniel</a>
+      <a href="services.html">Services</a>
+      <a href="listings.html">Active Listings</a>
+      <a href="for-lease.html">For Lease</a>
+      <a href="transactions.html">Featured Transactions</a>
+      <a href="industries.html">Industries</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html" class="active">Contact Daniel</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding-bottom:0;">
+  <div class="container">
+    <p class="eyebrow-plain">Contact Daniel</p>
+    <h1 style="max-width:18ch;">Let's discuss the opportunity.</h1>
+    <p style="margin-top:20px; max-width:60ch;">Request offering materials, a property tour, or a confidential conversation about a commercial real estate requirement.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="container">
+    <div class="grid-2" style="gap:64px; align-items:start;">
+      <div>
+        <h3>Direct Contact</h3>
+        <div style="margin-top:20px;">
+          <div class="fact"><p class="label">Phone</p><p class="value"><a href="tel:9095816603">(909) 581-6603</a></p></div>
+          <div class="fact"><p class="label">Email</p><p class="value"><a href="mailto:dvcommercial@gmail.com">dvcommercial@gmail.com</a></p></div>
+          <div class="fact"><p class="label">Brokerage</p><p class="value">MGR Real Estate</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Send an Inquiry</h3>
+          <form class="inquiry" action="https://api.web3forms.com/submit" method="POST" style="margin-top:24px;">
+            <input type="hidden" name="access_key" value="98b83c71-00f2-44f2-9db6-cecce9b5eea7">
+            <input type="hidden" name="subject" value="New inquiry from dvcommercial.com contact page">
+            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+            <div>
+              <label for="c-name">Name</label>
+              <input id="c-name" name="Name" type="text" required>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="c-phone">Phone</label>
+                <input id="c-phone" name="Phone" type="tel" required>
+              </div>
+              <div>
+                <label for="c-email">Email</label>
+                <input id="c-email" name="Email" type="email" required>
+              </div>
+            </div>
+            <div>
+              <label for="c-type">Inquiry Type</label>
+              <select id="c-type" name="Inquiry Type">
+                <option>Property Tour Request</option>
+                <option>Acquisition or Investment Advisory</option>
+                <option>Disposition or Leasing Advisory</option>
+                <option>Other Inquiry</option>
+              </select>
+            </div>
+            <div>
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="Message"></textarea>
+            </div>
+            <div class="btn-row">
+              <button type="submit" class="btn btn-primary">Send Inquiry</button>
+            </div>
+            <p style="font-size:0.78rem; color:var(--text-dim); margin-top:4px;">By submitting, you agree to be contacted regarding your inquiry.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>DV Commercial</h4>
+        <p>Commercial real estate advisory for acquisitions, dispositions, leasing, and investment across Southern California.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="listings.html">Active Listings</a></li>
+          <li><a href="transactions.html">Featured Transactions</a></li>
+          <li><a href="about.html">About Daniel</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:dvcommercial@gmail.com">dvcommercial@gmail.com</a></li>
+          <li><a href="contact.html">Discuss an Opportunity &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">The information contained herein has been obtained from sources deemed reliable but is not guaranteed. Prospective buyers and tenants should independently verify all information prior to relying upon it. Daniel Valenzuela, DRE #01871441 &middot; MGR Real Estate, Inc., DRE #01841921. &copy; <span id="year"></span> DV Commercial. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/site-scripts-v2.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
